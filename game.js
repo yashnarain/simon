@@ -20,6 +20,17 @@ $(document).keypress(function() {
   }
 });
 
+$(document).click(function() {
+  if (!started) {
+    $(".container").show();
+    $("h2").hide();
+    $("h3").hide();
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
+
 $(".btn").click(function() {
 
   var userChosenColour = $(this).attr("id");
